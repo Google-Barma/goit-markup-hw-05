@@ -15,10 +15,17 @@ body {
 
 ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 a {
     text-decoration: none;
+}
+
+img {
+    box-sizing: border-box;
+    display: block;
 }
 
 .container {
@@ -83,7 +90,7 @@ a {
 
 .menu-item {
     margin-right: 50px;
-    transition: color .2s ease-in;
+    transition: color 250ms ease-in;
 }
 
 .menu a {
@@ -104,7 +111,7 @@ a {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    transition: color .2s ease-in;
+    transition: color 250ms ease-in;
 }
 
 .contacts a {
@@ -205,8 +212,29 @@ a {
     display: flex;
 }
 
+.gallery li {
+    position: relative;
+}
+
 .gallery li:not(:last-child) {
     margin-right: 30px;
+}
+
+.gallery-text {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100%;
+    padding: 28px 0;
+    transform: translateX(-50%);
+    background: rgba(47, 48, 58, 0.8);
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white);
 }
 
 .our-team {
@@ -381,17 +409,17 @@ address p {
 .filter-button {
     width: 125px;
     height: 38px;
-    background: #F5F4FA;
+    background-color: #F5F4FA;
     border-radius: 4px;
     border: none;
     cursor: pointer;
+    transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-button:hover,
 .filter-button:focus {
     color:rgb(255, 255, 255);
     background-color: var(--accent-blue);
-    transition: all .2s ease-in;
 }
 
 .filter {
